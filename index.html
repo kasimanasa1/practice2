@@ -1,0 +1,754 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet"/>
+    <title>web design  mastery | woodzone </title>
+</head>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+
+   :root{
+       --primary-color:#ea9517;
+       --primary-color-dark: #fbbf24;
+       --secondary-color: #2a80b3;
+       --text-dark: #333333;
+       --text-light: #f5f5f5;
+       --white: #ffffff;
+       --max-width: 1200px;
+   }
+   
+   *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   
+   .section_container{
+       max-width: var(--max-width);
+       margin: auto;
+       padding: 5rem 1rem;
+   }
+   .section_header{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       gap: 2rem;
+       flex-wrap: wrap;
+       margin-bottom: 4rem;
+   }
+    
+   .section_title{
+         font-size: 2rem;
+         font-weight: 600;
+         color: var(--text-dark);
+   }
+   
+   a{
+       text-decoration:none ;
+   }
+   
+   img {
+      width: 100%;
+   }
+   
+   
+   body{
+       font-family: 'Poppins', sans-serif;
+   
+   }
+   
+   .logo_header{
+       padding: 1rem;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       gap:2rem;
+       flex-wrap: wrap;
+   }
+   
+   .logo_header img{
+       max-width: 150px;
+   }
+   
+   .contact_us{
+       display: flex;
+       align-items:center;
+       gap:2rem;
+       flex-wrap: wrap;
+   }
+   
+   .contact_us p{
+       display: flex;
+       align-items: center;
+       gap: 5px;
+       font-size: 0.8rem;
+       color: var(--text-dark);
+       cursor: pointer;
+   }
+   .contact_us i{
+       font-size: 1rem;
+   }
+   
+   nav{
+       background-color: var(--primary-color);
+   }
+   .nav_links{
+       padding: .5rem 1rem;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       gap: 2rem;
+       flex-wrap: wrap;
+   }
+   
+   .nav_links a{
+       font-size: 0.9rem;
+       color: var(--white);
+       transition: 0.3s;
+   }
+   
+   .nav_links a:hover{
+       color: var(--secondary-color);
+   }
+   .nav_links i{
+       font-size: 1.2rem;
+   }
+   
+   header{
+       min-height: 30rem;
+       background-image: url(https://i5.walmartimages.com/asr/b0e01f62-7307-464e-867d-29e35570856c.17cfd0dd9004c281bb6416e2e64c04f1.jpeg );
+       background-position: center center;
+       background-size: cover;
+       background-repeat: no-repeat;
+   }
+   
+   .header_container{
+       height: 30rem;
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+       color: var(--white);
+   }
+   
+   .header_container h1{
+       font-size: 4rem;
+   }
+   .header_container button{
+       margin-top: 1rem;
+       padding: 1rem 2rem;
+       outline: none;
+       border: none;
+       border-radius: 5px;
+       color: var(--white);
+       background-color: var(--primary-color);
+       cursor: pointer;
+       transition: .3s;
+   }
+   
+   .header_container button:hover{
+       background-color: var(--primary-color-dark);
+   }
+   
+   .banner_1{
+       background-color: var(--text-light);
+   }
+    
+   .banner_1_container{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       gap: 2rem;
+       flex-wrap: wrap;
+   }
+   
+   .banner_1_container .icon{
+       display: grid;
+       gap: 0.1rem;
+       text-align: center;
+       color: var(--text-dark);
+       font-size: 0.8rem;
+       cursor: pointer;
+   }
+   
+   .banner_1_container img{
+       width: 40px;
+       margin: auto;
+   }
+   
+   .arrivals_nav{
+       display: flex;
+       gap: 2rem;
+       font-weight: 500;
+       color: var(--text-dark);
+   }
+   
+   .arrivals_nav span{
+       cursor: pointer;
+       transition: .3s;
+   }
+   
+   .arrivals_nav span:hover{
+       color: var(--primary-color);
+   }
+   
+   .arrivals_grid{
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       gap: 2rem;
+       
+   }
+   
+   .arrivals_image,
+   .product_image{
+       display: flex;
+   }
+   
+   .arrivals_image:first-child{
+       grid-area: 1/1/2/3;
+   }
+   
+   .banner_2{
+       background-image: url(https://www.shutterstock.com/image-illustration/mock-living-room-interior-design-260nw-1935230354.jpg
+       );
+       background-position: center center;
+       background-size: cover;
+       background-repeat: no-repeat;
+   }
+   
+   .banner_2_container{
+       color: var(--white);
+       text-align: center;
+   }
+   
+   .banner_2_container p{
+       font-size: 1.5rem;
+   }
+   
+   .banner_2_container h2{
+       font-size: 5rem;
+       font-weight: 500;
+   }
+   
+   .countdown{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 2rem;
+       margin: 2rem 0;
+   }
+   
+   .square{
+       width: 80px;
+       height: 80px;
+       background-color: var(--primary-color);
+       display: grid;
+       place-content: center;
+       border-radius: 5px;
+   }
+   
+   .banner_2_container button{
+       padding: 1rem 2rem;
+       font-size: 1rem;
+       color: var(--primary-color);
+       outline: none;
+       border: none;
+       border-radius: 5px;
+       background-color: var(--white);
+       cursor: pointer;
+   }
+   
+   .seller_nav,
+   .product_nav{
+       font-size: 2rem;
+       color: var(--text-dark);
+       cursor: pointer;
+   }
+   
+   .seller_nav span,
+   .product_nav{
+       cursor: pointer;
+       transition: 0.3s;
+   }
+   
+   .seller_nav span:hover,
+   .product_nav span:hover{
+      color: var(--primary-color);
+   }
+   
+   .seller_grid,
+   .product_grid{
+       display: grid;
+       grid-template-columns: repeat(4,1fr);
+       gap: 2rem;
+   
+   }
+   
+   .seller_card{
+       cursor: pointer;
+   }
+   
+   .seller_card_details{
+       padding: 1rem 0;
+       background-color: var(--text-light);
+       text-align: center;
+   }
+   
+   .seller_card_details .price{
+       font-size: .8rem;
+   }
+   
+   .seller_card_details .price span{
+     color: var(--primary-color);
+   }
+   
+   .banner_3{
+       background-image: url(https://static.wixstatic.com/media/7af34f_5fca65404c14482eade15b1a79dff808~mv2.jpg/v1/fill/w_640,h_480,fp_0.64_0.60,q_80,usm_0.66_1.00_0.01,enc_auto/7af34f_5fca65404c14482eade15b1a79dff808~mv2.jpg);
+       background-position:center center;
+       background-repeat: no-repeat;
+       background-size: cover;
+   }
+   
+   .banner_3_container{
+       color: var(--white);
+       text-align: center;
+       pad: 8rem 1rem;
+   }
+   
+   .banner_3_container p{
+       font-size: 1.5rem;
+   }
+   
+   .banner_3_container h2{
+       font-size: 3rem;
+   }
+   
+   .product_image:nth-child(1){
+       grid-area: 1/1/3/3;
+   }
+   
+   .product_image:nth-child(2){
+       grid-area: 1/3/2/5;
+   }
+   
+   .blog_grid{
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       gap: 2rem;
+   }
+   
+   .blog_details{
+       display: grid;
+       gap: .5rem;
+       color: var(--text-dark);
+   }
+   
+   .blog_details p{
+       font-size: 0.8rem;
+   }
+   
+   .blog_details h4{
+       font-size: 1.2rem;
+       font-weight: 500;
+   }
+   
+   .blog_details span{
+       width: fit-content;
+       font-size: .8rem;
+       color: var(--primary-color);
+       cursor: pointer;
+       transition: 0.3s;
+   }
+   
+   .blog_details span:hover{
+     color: var(--secondary-color);
+   }
+   
+   .footer{
+       background: var(--text-dark);
+   }
+   
+   .footer_container{
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 5rem;
+       color: var(--text-dark);
+   }
+   
+   .footer_co1 img{
+       max-width: 150px;
+       margin-bottom: 2rem;
+   }
+   
+   .footer_co1 i{
+       font-size: 1rem;
+       margin-right: 1rem;
+   }
+   
+   .footer_co1 h4{
+       font-size: 1.2rem;
+       font-weight: 600;
+        margin-bottom: 2rem;
+   }
+   
+   .footer_co1 p{
+       font-size: .8rem;
+       font-weight: 600;
+       margin-bottom: 1rem;
+       transition: 0.3s;
+       cursor: pointer;
+   }
+   
+   .footer_co1 p:hover{
+       color: var(--primary-color);
+   }
+   
+   .footer_bar{
+       padding: 0.5rem;
+       font-size: 0.8rem;
+       text-align: center;
+       color: var(--white);
+       background-color: var(--primary-color);
+   }
+   
+   @media (width < 900px){
+       .banner_1_container{
+           gap: 3rem;
+       }
+   
+       .arrivals_grid,
+       .blog_grid{
+           grid-template-columns: repeat(2, 1fr);
+           gap: 1rem;
+       }
+   
+       .seller_grid,
+       .product_grid{
+           grid-template-columns: repeat(3, 1fr);
+           gap: 1rem;
+       }
+   
+       .product_image:nth-child(1){
+           grid-area: unset;
+       }
+   
+       .product_image:nth-child(2){
+           grid-area: 1/1/2/4;
+       }
+   }
+   
+
+</style>
+<body>
+    <div class="section_container logo_header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP5rN2mvkUqwINhljMJ7SVJTkoepIKxxBD3WcE-Ez6pLixjF8WEH8fcgbHIdmw5Jv05Vc&usqp=CAU" alt="logo">
+        <div class="contact_us">
+           <i class="ri-mail-fill"></i> info@woodzone.com
+            <i class="ri-phone-fill"></i> +919875543210
+        </div>
+    </div>
+    <nav>
+       <div class="section_container nav_links">
+        <span><a href="#">HOME</a></span>
+        <span><a href="#">LIVING ROOM</a></span>
+        <span><a href="#">DINING ROOM</a></span>
+        <span><a href="#">KITCHEN</a></span>
+        <span><a href="#">BATHROOM</a></span>
+        <span><a href="#">OFFICE</a></span>
+        <span><a href="#">LIGHT</a></span>
+        <span><a href="#">CONTACT US</a></span>
+        <span><a href="#">BLOG</a></span>
+        <span>
+        <a href="#">
+        <i class="ri-shopping-cart-2-line"></i>
+     </a>
+    </span>
+       </div> 
+    </nav>
+ <header>
+    <div class="section_container header_container">
+        <p>multicolor collection</p>
+        <h1>simple product</h1>
+        <button class="btn">SHOP NOW</button>
+    </div>
+ </header>
+ <section class="banner_1">
+  <div class="section_container banner_1_container">
+   <div class="icon">
+      <img src="https://thumbs.dreamstime.com/b/furniture-black-icons-vector-set-armchair-illustration-symbol-collection-sofa-logo-can-be-used-web-sites-mobile-220234489.jpg" alt="icon">
+      <span>SOFA</span>
+ </div>
+ <div class="icon">
+   <img src="https://cdn-icons-png.flaticon.com/512/2237/2237431.png" alt="icon">
+   <span>CHAIR</span>
+</div>
+<div class="icon">
+   <img src="https://cdn-icons-png.flaticon.com/512/677/677297.png" alt="icon">
+   <span>MINI TABLE</span>
+</div>
+<div class="icon">
+   <img src="https://cdn-icons-png.flaticon.com/512/2148/2148378.png" alt="icon">
+   <span>LAMP</span>
+</div>
+<div class="icon">
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5XhUU6cf-JndX9o0tOz0qDl3Abz7xHZeljQ&usqp=CAU" alt="icon">
+   <span>TABLE</span>
+</div>
+<div class="icon">
+   <img src="data:image/png;base64,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" alt="icon">
+   <span>DINING</span>
+</div>
+<div class="icon">
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSawmlE1ynTbr6y2f0XP6evY6palDIsXtKSlw&usqp=CAU" alt="icon">
+   <span>BED</span>
+</div>
+  </div>
+ </section>
+
+ <section class="arrivals">
+   <div class="section_container arrivals_container">
+      <div class="section_header">
+         <h3 class="section_title">NEW ARRIVALS</h3>
+         <div class="arrivals_nav">
+            <span>ALL</span>
+            <span>CHAIR</span>
+            <span>SOFAS</span>
+            <span>TABLES</span>
+            <span>LAMPS</span>
+         </div>
+      </div>
+      <div class="arrivals_grid">
+         <div class="arrivals_image">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgmjxv52UbwrNkBBWhRoCihZPjaVhn96s5mGv7DctG46-rRh8KCDaQfcbzTAGECwBD7OdfbQiQSH-BNUwLl6gfPqK5TOO-l9UStdshdMcDkvd-M0VlmMydw60ZBXyzusQEi1Vp6M5Es28oDajJ_ppNYlgJar0zaTWBhH2fT5JX3Vo50BSmSjasvPDI/s619/blue-sofa-coastal-living-room-idea-Florida-designer-showcase.jpg" alt="arrivals">
+         </div>
+         <div class="arrivals_image">
+            <img src="https://images-cdn.ubuy.co.in/634f1d05e690be2e9f431abe-lazy-sofa-lazy-sofa-single-sofa-chair.jpg" alt="arrivals">
+         </div>
+         <div class="arrivals_image">
+            <img src="https://www.ikea.com/in/en/images/products/vedbo-dining-table-black__0815091_pe772752_s5.jpg?f=s" alt="arrivals">
+         </div>
+         <div class="arrivals_image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMxeZyKChCOqDoC0MOW9pvWfqo9DeRaGbcacP3tU0JIN2akfB_xSpGEVq-GUreIHtR1d8&usqp=CAU" alt="arrivals">
+         </div>
+         <div class="arrivals_image">
+            <img src="https://m.media-amazon.com/images/I/71UrgSTJpaL.AC_UF894,1000_QL80.jpg" alt="arrivals">
+         </div>
+      </div>
+   </div>
+ </section>
+
+  <section class="banner_2">
+   <div class="dection_container banner_2_container">
+      <p>SUPER SALE</p>
+      <h2>UP TO 50%</h2>
+      <div class="countdown">
+         <div class="square">
+            <span>28</span>
+            <span>DAYS</span>
+         </div>
+         <div class="square">
+            <span>21</span>
+            <span>HRS</span>
+         </div>
+         <div class="square">
+            <span>15</span>
+            <span>MINS</span>
+         </div>
+         <div class="square">
+            <span>28</span>
+            <span>SEC</span>
+         </div>
+      </div>
+      <button>SHOP NOW</button>
+   </div>
+  </section>
+  <section class="seller">
+   <div class="section_container seller_container">
+      <div class="section_header">
+         <div class="section_title">BEST SELLER</div>
+         <div class="seller_nav">
+            <span><i class="ri-arrow-left-s-line"></i></span>
+            <span><i class="ri-arrow-right-s-line"></i></span>
+         </div>
+      </div>
+      <div class="seller_grid">
+         <div class="seller_card">
+            <img src="https://cdn.shopify.com/s/files/1/0026/8428/9113/products/01_31670717-2d57-4c76-8ef4-a3b303f5daf4_755x755.jpg?v=1671158840" alt="seller">
+            <div class="seller_card_details">
+               <p>lounge chair</p>
+               <p class="price"><span>$28.72</span> <del>$35.00</del></p>
+            </div>
+         </div>
+         <div class="seller_card">
+            <img src="https://cdn.shopify.com/s/files/1/0444/9488/0918/products/Avocado-Green-Mattress-Dressers-Side-Tables-web-60.jpg?v=1603824474" alt="seller">
+            <div class="seller_card_details">
+               <p>afternoon side table</p>
+               <p class="price"><span>$35.50</span> <del>$50.00</del></p>
+            </div>
+      </div>
+      <div class="seller_card">
+         <img src="https://cdn.shopify.com/s/files/1/0509/4640/8602/products/Luxury-Dining-Chairs-velvet-Fabric-and-brass-legs-hyderabad-light-grey-color-GHDC005_1024x.jpg?v=1634584743" alt="seller">
+         <div class="seller_card_details">
+            <p>dining chair</p>
+            <p class="price"><span>$18.75</span> <del>$30.00</del></p>
+         </div>
+   </div>
+   <div class="seller_card">
+      <img src="https://cdn.shopify.com/s/files/1/2690/0106/products/ModernVase_7.jpg?v=1610438012" alt="seller">
+      <div class="seller_card_details">
+         <p>flower vase</p>
+         <p class="price"><span>$40.72</span> <del>$45.00</del></p>
+      </div>
+   </div>
+   <div class="seller_card">
+      <img src="https://image.architonic.com/img_pro2-4/127/6920/club-chair-03-high-1-b.jpg" alt="seller">
+      <div class="seller_card_details">
+         <p>club chair</p>
+         <p class="price"><span>$25.25</span> <del>$35.00</del></p>
+      </div>
+   </div>
+   <div class="seller_card">
+      <img src="https://m.media-amazon.com/images/I/51xIg0dr+VL.jpg" alt="seller">
+      <div class="seller_card_details">
+         <p>dining chair</p>
+         <p class="price"><span>$40.00</span> <del>$42.00</del></p>
+      </div>
+   </div>
+   <div class="seller_card">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2022/7/JB/LT/TT/18294602/51urmgjfonl.jpg" alt="seller">
+      <div class="seller_card_details">
+         <p>rocking chair</p>
+         <p class="price"><span>$24.50</span> <del>$45.00</del></p>
+      </div>
+   </div>
+   <div class="seller_card">
+      <img src="https://cdn.shopify.com/s/files/1/0609/3094/9367/products/4136dd8a9dd1bb872a44a6649f13f7a9_grande.jpg?v=1654831114" alt="seller">
+      <div class="seller_card_details">
+         <p>arm chair</p>
+         <p class="price"><span>$50.25</span> <del>$65.00</del></p>
+   </div>
+   </div>
+    </div>
+   </div>
+    </section>
+
+    <section class="banner_3">
+      <div class="section_container banner_3_container">
+         <p>built work</p>
+         <h2>custom furniture design</h2>
+      </div>
+    </section>
+
+    <section class="product">
+      <div class="section_container product_container">
+         <div class="section_header">
+            <h3 class="section_title">SPECIAL PRODUCT</h3>
+            <div class="product_nav">
+               <span><i class="ri-arrow-left-s-line"></i></span>
+               <span><i class="ri-arrow-right-s-line"></i></span>
+
+            </div>
+            </div>
+            <div class="product_grid">
+               <div class="product_image">
+                  <img src="https://decoroutdoor.com/blog/wp-content/uploads/2021/06/outdoor-furniture-materials-guide.jpg" alt="product">
+               </div>
+               <div class="product_image">
+                  <img src="https://hips.hearstapps.com/countryliving/assets/17/01/1483470962-undefined.jpg" alt="product">
+               </div>
+               <div class="product_image">
+                  <img src="https://www.therange.co.uk/media/1/4/1675160356_12_5817.jpg" alt="product">
+               </div>
+               <div class="product_image">
+                  <img src="https://a.1stdibscdn.com/archivesE/upload/0/f_3624513/P1870712_l.jpg" alt="product">
+               </div>
+            </div>
+         </div>
+    </section>
+
+    <section class="blog">
+      <div class="section_container blog_container">
+         <div class="section_header">
+            <h3 class="section_title">OUR BLOGS</h3>
+            </div>
+            <div class="blog_grid">
+               <div class="blog_card">
+                  <img src="https://static.wixstatic.com/media/7af34f_5fca65404c14482eade15b1a79dff808~mv2.jpg/v1/fill/w_640,h_480,fp_0.64_0.60,q_80,usm_0.66_1.00_0.01,enc_auto/7af34f_5fca65404c14482eade15b1a79dff808~mv2.jpg" alt="blog">
+                  <div class="blog_details">
+                     <h4>sustainable furniture</h4>
+                     <p>offer tips on how to  keep furniture looking great and functioning well, including 
+                        how to clean different materials like, wood, leather, and fabric, how to protect 
+                        furniture from sun and wate and how to maintain the finish and of different pieces. </p>
+                     <span>read more</span>
+                  </div>
+               </div>
+               <div class="blog_card">
+                  <img src="https://s3.amazonaws.com/sierraimages/Images/Product/Large/10515.jpg" alt="blog">
+                  <div class="blog_details">
+                     <h4>furniture care and maintenance.</h4>
+                     <p>write about eco-friendly furniture options, such as pieces made from reclaimed or recycled materials,
+                         or furniture designed reduce waste or carbon footprint. you can also write about the benefits or
+                          sustainable furniture, such as durability,reduced environmental impact, and supporting local craftsmen.</p>
+                     <span>read more</span>
+                  </div>
+               </div>
+               <div class="blog_card">
+                  <img src="https://res.cloudinary.com/oz-design-furniture/image/upload/c_scale,h_918,w_918/f_auto/v1//Product/CH0224812-95?_a=AJAH1WI0" alt="blog">
+                  <div class="blog_details">
+                     <h4>interior design tips.</h4>
+                     <p>Get ahead of the crowd with home decor ideas and advice from the most celebrated designers, 
+                        and discover how to bring the latest interior design trends to every room, with our top interior design tips.
+                        Our clients wanted to infuse their rental with a signature of their own and commissioned us to furnish 
+                        the house in a wardrobe of color and cool,’ says Samantha Todhunter. </p>
+                     <span>read more</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+    </section>
+
+    <footer>
+      <div class="section_container footer_container">
+         <div class="footer_co1">
+            <img src="data:image/png;base64,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" alt="logo">
+            <p>
+               find a video range of hight-quanlity furniture pieces that will elevate
+               the style and functionality of your home.
+            </p>
+            <p><i class="ri-phone-fill"></i> +919875635292</p>
+            <p>
+               <i class="ri-map-pin-2-fill"></i>manipur, house-01, mirpur-11.5 bhaka-1258
+            </p>
+         </div>
+         <div class="footer_co1">
+            <h4>INFORMATION</h4>
+            <P>site map</P>
+            <P> search terms</P>
+            <P> advance search</P>
+            <P> privacy policy</P>
+            <P> suppliers</P>
+            <P> our stores</P>
+         </div>
+         <div class="footer_co1">
+            <h4>MY ACCOUNT</h4>
+            <P>login</P>
+            <P> about us</P>
+            <P> wishlist</P>
+            <P> checkout</P>
+            <P> FAQs</P>
+            <P>contact us</P>
+         </div>
+      </div>
+      <div class="footer_bar">
+         copyright &#169; 2023 web design mastery. all right reserved.
+      </div>
+    </footer>
+    
+</body>
+</html>
